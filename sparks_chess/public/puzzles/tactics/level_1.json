@@ -1,0 +1,12 @@
+{ "title": "Basic Tactics", "puzzles": [
+  { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king on e7 and queen on g7!", "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1", "solution": ["d4","f5"] },
+  { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king on d8 and rook on h8!", "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1", "solution": ["e5","f7"] },
+  { "label": "Back Rank Mate",   "hint": "Rook to d8 — checkmate on the back rank.", "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1", "solution": ["d1","d8"] },
+  { "label": "Smothered Mate",   "hint": "Knight to f7 — king trapped by its own pieces.", "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1", "solution": ["h6","f7"] },
+  { "label": "Scholars Mate",    "hint": "Queen takes f7 — checkmate!", "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+  { "label": "Rook Skewer",      "hint": "Rook takes queen — king flees, then we go for checkmate.", "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1", "solution": ["e1","e5"] },
+  { "label": "Queen Corner",     "hint": "Queen to g7 — king cannot escape.", "turn": "w", "fen": "6k1/8/5K1Q/8/8/8/8/8 w - - 0 1", "solution": ["h6","g7"] },
+  { "label": "Rook Mate",        "hint": "Rook to h8 — king and rook deliver mate.", "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1", "solution": ["h1","h8"] },
+  { "label": "Queen Back Rank",  "hint": "Queen to d8 — the decisive blow.", "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1", "solution": ["d1","d8"] },
+  { "label": "Queen Corner",      "hint": "Queen skewer check", "turn": "w", "fen": "q7/6Q1/8/3k4/8/3K4/8/8 w - - 0 1", "solution": ["g7","g2"] }
+] }

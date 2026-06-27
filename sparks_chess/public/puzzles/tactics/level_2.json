@@ -1,0 +1,71 @@
+{ "title": "Pins & Skewers", "puzzles": [
+  { "label": "Rook Skewer",     "hint": "Rook to e8 — king flees, then we take the queen.", "turn": "w", "fen": "kb6/p7/8/8/8/3B4/8/7K w - - 0 1", "solution": ["d3","e4"] },
+  {
+    "label": "Bishop skewer",
+    "hint": "Bishop to e4 pins the king and rook.",
+    "turn": "w",
+    "fen": "kb6/p7/8/3r4/8/3B4/8/7K w - - 0 1",
+    "solution": ["d3", "e4"]
+  },
+  {
+    "label": "Bishop pins the queen",
+    "hint": "Bishop to f5 pins the queen to the king",
+    "turn": "w",
+    "fen": "2k5/1n1q4/8/8/4B3/3Q4/2K5/8 w - - 0 1",
+    "solution": ["e4","f5"]
+  },
+  {
+    "label": "Queen Skewer K+R",
+    "hint": "Bishop skewers the king and wins the rook.",
+    "turn": "w",
+    "fen": "r7/8/2k5/8/8/8/2NBB3/4K3 w - - 0 1",
+    "solution": ["e2","f3"]
+  },
+  {
+    "label": "Bishop + rook Skewer",
+    "hint": "Bishop to h6+ wins the queen.",
+    "turn": "w",
+    "fen": "4kq2/8/8/8/8/4B3/4R3/4K3 w - - 0 1",
+    "solution": ["e3","h6"]
+  },
+
+  {
+    "label": "Absolute Pin",
+    "hint": "Bishop to c5 pins the knight to the king.",
+    "turn": "w",
+    "fen": "5k1r/R3n2p/6p1/8/8/4B3/4PP2/4K3 w - - 0 1",
+    "solution": ["e3","c5"]
+  },
+
+  {
+    "label": "Queen Pin",
+    "hint": "Rook to c8 pins the queen to the king.",
+    "turn": "w",
+    "fen": "3qk3/3ppp2/8/8/8/8/2RP4/2R1K3 w - - 0 1",
+    "solution": ["c2","c8"]
+  },
+
+  {
+    "label": "Relative Pin",
+    "hint": "Bishop to c4 pins the knight to the queen.",
+    "turn": "w",
+    "fen": "r3k1q1/pp3n2/8/8/8/3BB3/3PP3/2RK1R2 w q - 0 1",
+    "solution": ["d3","c4"]
+  },
+
+  {
+    "label": "File Pin",
+    "hint": "b5! is the way.",
+    "turn": "w",
+    "fen": "4kb2/3r4/8/8/8/8/6P1/3RKB2 w - - 0 1",
+    "solution": ["f1","b5"]
+  },
+
+  {
+    "label": "Diagonal Pin",
+    "hint": "Pin and draw ewith the lightsquared bishop",
+    "turn": "w",
+    "fen": "4k3/4rr2/8/8/8/5B2/3BP3/4K3 w - - 0 1",
+    "solution": ["f3","h5"]
+  }
+] }

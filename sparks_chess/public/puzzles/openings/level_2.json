@@ -1,0 +1,105 @@
+{
+  "title": "Three Knights - 1.e4,e5 2.Nf3,Nc6 3.Nc3,Bc5",
+  "puzzles": [
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "Knight takes the central pawn",
+      "turn": "w",
+      "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 2 1",
+      "solution": [
+        "f3",
+        "e5"
+      ]
+    },
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "d4 rewins the piece back",
+      "turn": "w",
+      "fen": "r1bqk1nr/pppp1ppp/8/2b1n3/4P3/2N5/PPPP1PPP/R1BQKB1R w KQkq - 0 1",
+      "solution": [
+        "d2",
+        "d4"
+      ]
+    },
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "Regaining back the piece",
+      "turn": "w",
+      "fen": "r1bqk1nr/pppp1ppp/3b4/4n3/3PP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 2 1",
+      "solution": [
+        "d4",
+        "e5"
+      ]
+    },
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "Bishop to e3 — develops a piece and prepares a castle.",
+      "turn": "w",
+      "fen": "r1bqk1nr/pppp1ppp/8/4b3/4P3/2N5/PPP2PPP/R1BQKB1R w KQkq - 2 1",
+      "solution": [
+        "f1",
+        "d3"
+      ]
+    },
+    {
+      "label": "Castle to Safety",
+      "hint": "Castle kingside — king safety before anything else.",
+      "turn": "w",
+      "fen": "r1bqk2r/pppp1ppp/5n2/4b3/4P3/2NB4/PPP2PPP/R1BQK2R w KQkq - 2 1",
+      "solution": [
+        "e1",
+        "g1"
+      ]
+    },
+    {
+      "label": "Central Knight",
+      "hint": "Preparing the f4 push and trying to trap the bishop",
+      "turn": "w",
+      "fen": "r1bqk2r/ppp2ppp/3p1n2/4b3/4P3/2NB4/PPP2PPP/R1BQ1RK1 w kq - 2 1",
+      "solution": [
+        "c3",
+        "e2"
+      ]
+    },
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "Everything is ready for f4",
+      "turn": "w",
+      "fen": "r1bqk2r/pppn1ppp/3p4/4b3/4P3/3B4/PPP1NPPP/R1BQ1RK1 w kq - 2 1",
+      "solution": [
+        "f2",
+        "f4"
+      ]
+    },
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "Developing a night to more active square",
+      "turn": "w",
+      "fen": "r1bqk2r/pppn1ppp/3p1b2/8/4PP2/3B4/PPP1N1PP/R1BQ1RK1 w kq - 2 1",
+      "solution": [
+        "e2",
+        "g3"
+      ]
+    },
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "Developing the last piece to the more active square",
+      "turn": "w",
+      "fen": "r1bqk2r/ppp2ppp/3p1b2/2n5/4PP2/3B2N1/PPP3PP/R1BQ1RK1 w kq - 2 1",
+      "solution": [
+        "c1",
+        "e3"
+      ]
+    },
+    {
+      "label": "Three Knights - Bc5",
+      "hint": "Recapture a piece",
+      "turn": "w",
+      "fen": "r1bqk2r/ppp2ppp/3p1b2/8/4PP2/3nB1N1/PPP3PP/R2Q1RK1 w kq - 0 1",
+      "solution": [
+        "c2",
+        "d3"
+      ]
+    }
+  ]
+}

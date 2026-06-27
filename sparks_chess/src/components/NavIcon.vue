@@ -31,6 +31,12 @@
       <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
     </template>
 
+    <!-- Endless: infinity symbol -->
+    <template v-else-if="name === 'endless'">
+      <path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z" fill="currentColor" stroke="none"/>
+      <path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z" fill="currentColor" stroke="none"/>
+    </template>
+
   </svg>
 </template>
 

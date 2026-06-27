@@ -1,0 +1,105 @@
+{
+  "title": "Rook Checkmates",
+  "puzzles": [
+    {
+      "label": "Back Rank Mate",
+      "hint": "Rook to d8 is checkmate on the back rank!",
+      "turn": "w",
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",
+      "solution": [
+        "d1",
+        "d8"
+      ]
+    },
+    {
+      "label": "Rook Corner",
+      "hint": "Rook to h8 — white king covers the escape squares.",
+      "turn": "w",
+      "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",
+      "solution": [
+        "h1",
+        "h8"
+      ]
+    },
+    {
+      "label": "Rook + King",
+      "hint": "Rook to g8 — white king cuts off all escape.",
+      "turn": "w",
+      "fen": "1k6/8/1K6/8/8/8/8/6R1 w - - 0 1",
+      "solution": [
+        "g1",
+        "g8"
+      ]
+    },
+    {
+      "label": "Rook Side Mate",
+      "hint": "Rook to e8 — king trapped in the corner.",
+      "turn": "w",
+      "fen": "k7/8/1K6/8/8/8/8/4R3 w - - 0 1",
+      "solution": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "label": "Rook Edge Mate",
+      "hint": "Rook to f8 — king on the edge has nowhere to go.",
+      "turn": "w",
+      "fen": "5k2/R7/5K2/8/8/8/8/8 w - - 0 1",
+      "solution": [
+        "a7",
+        "a8"
+      ]
+    },
+    {
+      "label": "Rook a-file",
+      "hint": "Rook to a8 — the back rank is open!",
+      "turn": "w",
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+      "solution": [
+        "a1",
+        "a8"
+      ]
+    },
+    {
+      "label": "Rook c8",
+      "hint": "Rook to c8 — king on b6 covers the escape.",
+      "turn": "w",
+      "fen": "1k6/8/1K6/8/8/8/8/3R4 w - - 0 1",
+      "solution": [
+        "d1",
+        "d8"
+      ]
+    },
+    {
+      "label": "Rook g8",
+      "hint": "Rook to g8 — the king is trapped.",
+      "turn": "w",
+      "fen": "6k1/6p1/6Kp/8/8/8/8/3R4 w - - 0 1",
+      "solution": [
+        "d1",
+        "d8"
+      ]
+    },
+    {
+      "label": "Rook Side 2",
+      "hint": "Rook to a8 — king and rook work together.",
+      "turn": "w",
+      "fen": "7k/6pp/8/8/8/8/6PP/R5K1 w - - 0 1",
+      "solution": [
+        "a1",
+        "a8"
+      ]
+    },
+    {
+      "label": "Two Rooks",
+      "hint": "Rook to a8 — the ladder mate!",
+      "turn": "w",
+      "fen": "7k/5Rpp/8/8/8/8/6PP/6K1 w - - 0 1",
+      "solution": [
+        "f7",
+        "f8"
+      ]
+    }
+  ]
+}

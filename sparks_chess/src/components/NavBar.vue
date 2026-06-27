@@ -82,4 +82,10 @@
   background: rgba(232, 213, 163, 0.15);
   border-bottom: 2px solid #e8d5a3;
 }
+
+@media (max-width: 640px) {
+  .navbar    { padding: 0 20px; }
+  .nav-links { display: none; }
+}
+
 </style>

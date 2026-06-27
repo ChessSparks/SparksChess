@@ -1,0 +1,105 @@
+{
+  "title": "First Moves",
+  "puzzles": [
+    {
+      "label": "Open Game (1.e4)",
+      "hint": "Pawn to e4 — Best by test!",
+      "turn": "w",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "label": "Develop the Knight",
+      "hint": "Knight to f3 — develops a piece and controls e5.",
+      "turn": "w",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "g1",
+        "f3"
+      ]
+    },
+    {
+      "label": "Italian Game",
+      "hint": "Bishop to c4 — eyeing the f7 weakness.",
+      "turn": "w",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "solution": [
+        "f1",
+        "c4"
+      ]
+    },
+    {
+      "label": "Ruy Lopez",
+      "hint": "Bishop to b5 — pinning the knight on c6.",
+      "turn": "w",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "solution": [
+        "f1",
+        "b5"
+      ]
+    },
+    {
+      "label": "Queens Gambit",
+      "hint": "Pawn to c4 — offering the c-pawn to contest the centre.",
+      "turn": "w",
+      "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "c2",
+        "c4"
+      ]
+    },
+    {
+      "label": "Sicilian Defence",
+      "hint": "Pawn to c5 — Black contests the centre from the flank.",
+      "turn": "b",
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+      "solution": [
+        "c7",
+        "c5"
+      ]
+    },
+    {
+      "label": "London System",
+      "hint": "Bishop to f4 — solid development, the London way.",
+      "turn": "w",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 2",
+      "solution": [
+        "c1",
+        "f4"
+      ]
+    },
+    {
+      "label": "Castle to Safety",
+      "hint": "Castle kingside — king safety before anything else.",
+      "turn": "w",
+      "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 4 6",
+      "solution": [
+        "e1",
+        "g1"
+      ]
+    },
+    {
+      "label": "Central Knight",
+      "hint": "Knight to c3 — supports centre pawn and develops quickly.",
+      "turn": "w",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 4",
+      "solution": [
+        "b1",
+        "c3"
+      ]
+    },
+    {
+      "label": "Kings Indian Fianchetto",
+      "hint": "Bishop to g7 — fianchetto completes the Kings Indian.",
+      "turn": "b",
+      "fen": "rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq c3 0 3",
+      "solution": [
+        "f8",
+        "g7"
+      ]
+    }
+  ]
+}

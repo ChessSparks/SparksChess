@@ -1,0 +1,313 @@
+{
+  "mates": [
+    {
+      "title": "Rook Checkmates",
+      "puzzles": [
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 is checkmate on the back rank!",             "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",  "solution": ["d1","d8"] },
+        { "label": "Rook Corner",      "hint": "Rook to h8 — white king covers the escape squares.",    "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",             "solution": ["h1","h8"] },
+        { "label": "Rook + King",      "hint": "Rook to a8 — white king cuts off all escape.",          "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/R7 w - - 0 1",            "solution": ["a1","a8"] },
+        { "label": "Rook Side Mate",   "hint": "Rook to b8 — king trapped in the corner.",              "turn": "w", "fen": "k7/8/1K6/8/8/8/8/1R6 w - - 0 1",            "solution": ["b1","b8"] },
+        { "label": "Rook Edge Mate",   "hint": "Rook to f8 — king on the edge has nowhere to go.",     "turn": "w", "fen": "5k2/8/5K2/8/8/8/8/5R2 w - - 0 1",           "solution": ["f1","f8"] },
+        { "label": "Back Rank Rook 2", "hint": "Rook cuts the king off — slide it to a8.",             "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",      "solution": ["a1","a8"] },
+        { "label": "Rook + King 2",    "hint": "Rook to c8 — king on b6 covers the escape.",           "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/2R5 w - - 0 1",            "solution": ["c1","c8"] },
+        { "label": "Rook h-file",      "hint": "Rook to h8 — king can't hide.",                        "turn": "w", "fen": "7k/6pp/8/8/8/8/6PP/R5K1 w - - 0 1",          "solution": ["a1","a8"] },
+        { "label": "Rook + King 3",    "hint": "Rook to g8 — the king is trapped.",                    "turn": "w", "fen": "6k1/6pp/6K1/8/8/8/8/6R1 w - - 0 1",          "solution": ["g1","g8"] },
+        { "label": "Two Rooks",        "hint": "First rook to a8 — checkmate!",                        "turn": "w", "fen": "7k/6pp/8/8/8/8/6PP/R1R3K1 w - - 0 1",        "solution": ["a1","a8"] }
+      ]
+    },
+    {
+      "title": "Queen Checkmates",
+      "puzzles": [
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — back rank checkmate.",                   "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Corner with Queen","hint": "Queen to h7 — king trapped in the corner!",            "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Queen + Rook",     "hint": "Queen to g7 — rook on h2 covers the h-file.",         "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Queen b-file",     "hint": "Queen to b8 — king on a8 is mated.",                  "turn": "w", "fen": "k7/1Q6/2K5/8/8/8/8/8 w - - 0 1",             "solution": ["b7","b8"] },
+        { "label": "Queen + King",     "hint": "Queen to a7 — the king cannot escape.",               "turn": "w", "fen": "k7/8/2K5/8/8/8/8/Q7 w - - 0 1",              "solution": ["a1","a7"] },
+        { "label": "Queen f-file",     "hint": "Queen to f8 — checkmate on the edge.",                "turn": "w", "fen": "5k2/8/4QK2/8/8/8/8/8 w - - 0 1",             "solution": ["e6","f7"] },
+        { "label": "Two Queens",       "hint": "Queen to g7 — the other queen controls the h-file.",  "turn": "w", "fen": "7k/8/8/8/8/8/6QQ/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Queen h-file",     "hint": "Queen to h8 — king has no moves.",                    "turn": "w", "fen": "7k/6K1/8/8/8/8/8/7Q w - - 0 1",              "solution": ["h1","h8"] },
+        { "label": "Queen d-file",     "hint": "Queen to d7 — checkmate on the 7th rank.",            "turn": "w", "fen": "k7/8/1K6/8/8/8/8/3Q4 w - - 0 1",             "solution": ["d1","d7"] },
+        { "label": "Queen Corner 2",   "hint": "Queen to a8 — the king has no escape.",               "turn": "w", "fen": "k7/8/2K5/8/8/8/8/7Q w - - 0 1",              "solution": ["h1","a8"] }
+      ]
+    },
+    {
+      "title": "Smothered & Knight",
+      "puzzles": [
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — king smothered by its own pieces!",    "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Scholar's Mate",   "hint": "Queen takes f7 — the king cannot escape!",             "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king on e7 and queen on g7.",   "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king on d8 and rook on h8.",    "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Smothered 2",      "hint": "Knight to g6 — the king has no escape.",              "turn": "w", "fen": "5rkr/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","g8"] },
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 is checkmate on the back rank!",           "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Knight + Queen",   "hint": "Queen to g7 — knight covers the escape.",             "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Rook Corner",      "hint": "Rook to h8 — white king covers the escape squares.", "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — king is trapped in the corner.",       "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Rook Edge Mate",   "hint": "Rook to f8 — king on the edge has nowhere to go.",   "turn": "w", "fen": "5k2/8/5K2/8/8/8/8/5R2 w - - 0 1",            "solution": ["f1","f8"] }
+      ]
+    },
+    {
+      "title": "Opening Traps",
+      "puzzles": [
+        { "label": "Scholar's Mate",   "hint": "Queen takes f7 — checkmate in 4 moves!",              "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Back Rank Trap",   "hint": "Rook to d8 — back rank checkmate!",                   "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Rook Skewer",      "hint": "Rook to e8 — king flees, then we take the queen.",    "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Knight Fork",      "hint": "Knight to f5 — forks king and queen!",                "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — the king is smothered!",               "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — king in the corner has nowhere to go.", "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Rook Corner",      "hint": "Rook to a8 — the king cannot escape.",               "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/R7 w - - 0 1",              "solution": ["a1","a8"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — checkmate!",                            "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king and rook!",                "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Rook b-file",      "hint": "Rook to b8 — the king is trapped.",                  "turn": "w", "fen": "k7/8/1K6/8/8/8/8/1R6 w - - 0 1",              "solution": ["b1","b8"] }
+      ]
+    },
+    {
+      "title": "Master Patterns",
+      "puzzles": [
+        { "label": "Queen + Rook",     "hint": "Queen to g7 — rook covers the h-file.",              "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — smothered checkmate!",                "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Scholar's Mate",   "hint": "Queen takes f7 — the classic trap!",                 "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Knight Fork",      "hint": "Knight to f5 — fork king and queen!",                "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "Rook Skewer",      "hint": "Rook to e8 skewers the king!",                       "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Rook Corner",      "hint": "Rook to h8 — clean corner checkmate.",               "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — the king is in the corner.",           "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Back Rank",        "hint": "Rook to d8 — the back rank strikes again!",         "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king and rook!",               "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Two Rooks Mate",   "hint": "Rook to a8 — the ladder mate!",                     "turn": "w", "fen": "7k/6pp/8/8/8/8/6PP/R1R3K1 w - - 0 1",        "solution": ["a1","a8"] }
+      ]
+    }
+  ],
+
+  "tactics": [
+    {
+      "title": "Basic Forks",
+      "puzzles": [
+        { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king on e7 and queen on g7!",  "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king on d8 and rook on h8!",   "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 — checkmate on the back rank.",           "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — king trapped by its own pieces.",     "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Scholar's Mate",   "hint": "Queen takes f7 — checkmate!",                        "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Rook Skewer",      "hint": "Rook to e8 — king flees, then we take the queen.",  "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — king cannot escape.",                  "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Rook Mate",        "hint": "Rook to h8 — king and rook deliver mate.",           "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — the decisive blow.",                   "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Rook Corner",      "hint": "Rook to a8 — king and rook work together.",          "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/R7 w - - 0 1",              "solution": ["a1","a8"] }
+      ]
+    },
+    {
+      "title": "Pins & Skewers",
+      "puzzles": [
+        { "label": "Rook Skewer",      "hint": "Rook to e8 — king flees, then we take the queen.",  "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king and queen!",              "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king and rook!",               "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 — checkmate on the back rank.",          "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — king smothered by its pieces.",      "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — the king is finished.",               "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Rook Corner",      "hint": "Rook to h8 — corner checkmate.",                    "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — back rank strikes!",                  "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Queen + Rook",     "hint": "Queen to g7 — the rook covers h-file.",             "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Rook Side Mate",   "hint": "Rook to a8 — king and rook work together.",         "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/R7 w - - 0 1",              "solution": ["a1","a8"] }
+      ]
+    },
+    {
+      "title": "Back Rank Tactics",
+      "puzzles": [
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 — the classic back rank checkmate!",     "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — slides in for the checkmate.",        "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Rook a-file",      "hint": "Rook to a8 — the back rank is open!",              "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",       "solution": ["a1","a8"] },
+        { "label": "Scholar's Mate",   "hint": "Queen takes f7 — checkmate!",                       "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — king smothered!",                    "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king and queen!",             "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "Rook Skewer",      "hint": "Rook to e8 — king moves, we take the queen.",       "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — king is cornered!",                   "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Rook Corner",      "hint": "Rook to h8 — the king and rook technique.",         "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king and rook!",              "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] }
+      ]
+    },
+    {
+      "title": "Combinations",
+      "puzzles": [
+        { "label": "Scholar's Mate",   "hint": "Queen takes f7 — the classic opening trap!",        "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — smothered checkmate!",               "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king and queen!",             "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "Rook Skewer",      "hint": "Rook to e8 — king flees, queen falls.",             "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 — back rank checkmate!",                 "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Queen + Rook",     "hint": "Queen to g7 — rook covers the h-file.",             "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king and rook!",              "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — checkmate!",                          "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Rook Corner",      "hint": "Rook to h8 — corner checkmate!",                    "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — the king is trapped!",               "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] }
+      ]
+    },
+    {
+      "title": "Grandmaster Patterns",
+      "puzzles": [
+        { "label": "Scholar's Mate",   "hint": "The classic 4-move checkmate!",                     "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — the ultimate smothered mate!",       "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king and queen simultaneously!", "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",        "solution": ["d4","f5"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king and rook!",              "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Rook Skewer",      "hint": "Rook to e8 — the king must flee!",                  "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Queen + Rook",     "hint": "Queen to g7 — the mating net closes!",              "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 — the decisive back rank blow!",         "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — cornered and mated!",                 "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Rook Corner",      "hint": "Rook to h8 — the perfect corner checkmate!",        "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — the back rank delivers!",             "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] }
+      ]
+    }
+  ],
+
+  "endgames": [
+    {
+      "title": "King & Rook Mate",
+      "puzzles": [
+        { "label": "K+R Corner",       "hint": "Rook to h8 — king and rook deliver checkmate.",      "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "K+R Side",         "hint": "Rook to a8 — white king cuts off every escape.",    "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/R7 w - - 0 1",              "solution": ["a1","a8"] },
+        { "label": "K+R Edge",         "hint": "Rook to b8 — king trapped in the corner.",           "turn": "w", "fen": "k7/8/1K6/8/8/8/8/1R6 w - - 0 1",             "solution": ["b1","b8"] },
+        { "label": "K+R f-file",       "hint": "Rook to f8 — king on the edge has nowhere to go.",  "turn": "w", "fen": "5k2/8/5K2/8/8/8/8/5R2 w - - 0 1",            "solution": ["f1","f8"] },
+        { "label": "Back Rank Rook",   "hint": "Rook to d8 — the rook endgame technique.",           "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Rook a-file",      "hint": "Rook to a8 — the back rank is open!",              "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",       "solution": ["a1","a8"] },
+        { "label": "Rook c8",          "hint": "Rook to c8 — king on b6 covers the escape.",        "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/2R5 w - - 0 1",             "solution": ["c1","c8"] },
+        { "label": "Rook g8",          "hint": "Rook to g8 — the king is trapped.",                 "turn": "w", "fen": "6k1/6pp/6K1/8/8/8/8/6R1 w - - 0 1",           "solution": ["g1","g8"] },
+        { "label": "Rook Side 2",      "hint": "Rook to a8 — king and rook work together.",         "turn": "w", "fen": "7k/6pp/8/8/8/8/6PP/R5K1 w - - 0 1",           "solution": ["a1","a8"] },
+        { "label": "Two Rooks",        "hint": "Rook to a8 — the ladder mate!",                     "turn": "w", "fen": "7k/6pp/8/8/8/8/6PP/R1R3K1 w - - 0 1",        "solution": ["a1","a8"] }
+      ]
+    },
+    {
+      "title": "King & Queen Mate",
+      "puzzles": [
+        { "label": "K+Q Corner",       "hint": "Queen to h7 — together with the king: checkmate!",  "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — the decisive back rank mate.",         "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Q+R Mate",         "hint": "Queen to g7 — rook secures the h-file.",            "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Queen b8",         "hint": "Queen to b8 — king on a8 is mated.",                "turn": "w", "fen": "k7/1Q6/2K5/8/8/8/8/8 w - - 0 1",             "solution": ["b7","b8"] },
+        { "label": "Two Queens",       "hint": "Queen to g7 — two queens deliver mate!",            "turn": "w", "fen": "7k/8/8/8/8/8/6QQ/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Queen h8",         "hint": "Queen to h8 — king has no moves.",                  "turn": "w", "fen": "7k/6K1/8/8/8/8/8/7Q w - - 0 1",              "solution": ["h1","h8"] },
+        { "label": "Queen a7",         "hint": "Queen to a7 — the king cannot escape.",             "turn": "w", "fen": "k7/8/2K5/8/8/8/8/Q7 w - - 0 1",              "solution": ["a1","a7"] },
+        { "label": "Queen d7",         "hint": "Queen to d7 — checkmate on the 7th rank.",          "turn": "w", "fen": "k7/8/1K6/8/8/8/8/3Q4 w - - 0 1",             "solution": ["d1","d7"] },
+        { "label": "Queen f7",         "hint": "Queen to f7 — checkmate on the edge.",              "turn": "w", "fen": "5k2/8/4QK2/8/8/8/8/8 w - - 0 1",             "solution": ["e6","f7"] },
+        { "label": "Queen a8",         "hint": "Queen to a8 — the king has no escape.",             "turn": "w", "fen": "k7/8/2K5/8/8/8/8/7Q w - - 0 1",              "solution": ["h1","a8"] }
+      ]
+    },
+    {
+      "title": "Pawn Endgames",
+      "puzzles": [
+        { "label": "Back Rank Rook",   "hint": "Rook to d8 — the signature endgame technique.",     "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "K+R Corner",       "hint": "Rook to h8 — king and rook deliver checkmate.",     "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — together with the king: checkmate!",  "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "K+R Side",         "hint": "Rook to a8 — white king cuts off every escape.",    "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/R7 w - - 0 1",              "solution": ["a1","a8"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — the decisive blow.",                   "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — king trapped by its own pieces.",    "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Knight Fork",      "hint": "Knight to f5 — fork king and queen!",               "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "K+R Edge",         "hint": "Rook to b8 — king is trapped in the corner.",       "turn": "w", "fen": "k7/8/1K6/8/8/8/8/1R6 w - - 0 1",             "solution": ["b1","b8"] },
+        { "label": "Q+R Mate",         "hint": "Queen to g7 — rook secures the h-file.",            "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "K+R f-file",       "hint": "Rook to f8 — king on the edge has nowhere to go.", "turn": "w", "fen": "5k2/8/5K2/8/8/8/8/5R2 w - - 0 1",             "solution": ["f1","f8"] }
+      ]
+    },
+    {
+      "title": "Rook Endings",
+      "puzzles": [
+        { "label": "K+R Corner",       "hint": "Rook to h8 — the classic rook ending technique.",   "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Back Rank",        "hint": "Rook to d8 — the back rank delivers!",              "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "K+R Side",         "hint": "Rook to a8 — cut off the king!",                   "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/R7 w - - 0 1",              "solution": ["a1","a8"] },
+        { "label": "Rook b8",          "hint": "Rook to b8 — king trapped in the corner.",          "turn": "w", "fen": "k7/8/1K6/8/8/8/8/1R6 w - - 0 1",             "solution": ["b1","b8"] },
+        { "label": "Rook f8",          "hint": "Rook to f8 — king on the edge falls.",             "turn": "w", "fen": "5k2/8/5K2/8/8/8/8/5R2 w - - 0 1",             "solution": ["f1","f8"] },
+        { "label": "Q+R Combo",        "hint": "Queen to g7 — rook seals the h-file.",              "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Rook a-file",      "hint": "Rook to a8 — cut off the king completely!",        "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",       "solution": ["a1","a8"] },
+        { "label": "Rook c8",          "hint": "Rook to c8 — king on b6 covers the escape.",       "turn": "w", "fen": "1k6/8/1K6/8/8/8/8/2R5 w - - 0 1",             "solution": ["c1","c8"] },
+        { "label": "Rook g8",          "hint": "Rook to g8 — the king is trapped.",                "turn": "w", "fen": "6k1/6pp/6K1/8/8/8/8/6R1 w - - 0 1",           "solution": ["g1","g8"] },
+        { "label": "Two Rooks",        "hint": "Rook to a8 — two rooks deliver the ladder mate!",  "turn": "w", "fen": "7k/6pp/8/8/8/8/6PP/R1R3K1 w - - 0 1",        "solution": ["a1","a8"] }
+      ]
+    },
+    {
+      "title": "Advanced Endings",
+      "puzzles": [
+        { "label": "Scholar's Mate",   "hint": "Queen takes f7 — the opening trap checkmate!",      "turn": "w", "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4", "solution": ["h5","f7"] },
+        { "label": "Smothered Mate",   "hint": "Knight to f7 — smothered checkmate!",               "turn": "w", "fen": "6rk/6pp/7N/8/8/8/6PP/6K1 w - - 0 1",         "solution": ["h6","f7"] },
+        { "label": "Knight Fork K+Q",  "hint": "Knight to f5 — forks king and queen!",             "turn": "w", "fen": "8/4k1q1/8/8/3N4/8/8/4K3 w - - 0 1",           "solution": ["d4","f5"] },
+        { "label": "K+R Corner",       "hint": "Rook to h8 — the ultimate endgame technique.",      "turn": "w", "fen": "k7/8/K7/8/8/8/8/7R w - - 0 1",               "solution": ["h1","h8"] },
+        { "label": "Queen Corner",     "hint": "Queen to h7 — king trapped in the corner!",        "turn": "w", "fen": "7k/6K1/7Q/8/8/8/8/8 w - - 0 1",              "solution": ["h6","h7"] },
+        { "label": "Back Rank Mate",   "hint": "Rook to d8 — the signature endgame blow!",         "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",      "solution": ["d1","d8"] },
+        { "label": "Q+R Mate",         "hint": "Queen to g7 — the mating net is complete!",        "turn": "w", "fen": "7k/8/8/8/8/8/6QR/6K1 w - - 0 1",              "solution": ["g2","g7"] },
+        { "label": "Knight Fork K+R",  "hint": "Knight to f7 — forks king and rook!",              "turn": "w", "fen": "3k3r/8/8/4N3/8/8/8/4K3 w - - 0 1",            "solution": ["e5","f7"] },
+        { "label": "Rook Skewer",      "hint": "Rook to e8 — king flees, we take the queen!",      "turn": "w", "fen": "4k3/8/8/4q3/8/8/8/4R2K w - - 0 1",           "solution": ["e1","e8"] },
+        { "label": "Queen Back Rank",  "hint": "Queen to d8 — the final blow!",                     "turn": "w", "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",      "solution": ["d1","d8"] }
+      ]
+    }
+  ],
+
+  "openings": [
+    {
+      "title": "First Moves",
+      "puzzles": [
+        { "label": "Open Game (1.e4)",         "hint": "Pawn to e4 — the most popular first move.",                  "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",              "solution": ["e2","e4"] },
+        { "label": "Develop the Knight",       "hint": "Knight to f3 — develops a piece and controls e5.",          "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1",           "solution": ["g1","f3"] },
+        { "label": "Italian Game",             "hint": "Bishop to c4 — eyeing the f7 weakness.",                    "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",      "solution": ["f1","c4"] },
+        { "label": "Ruy López",                "hint": "Bishop to b5 — pinning the knight on c6.",                  "turn": "w", "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",   "solution": ["f1","b5"] },
+        { "label": "Queen's Gambit",           "hint": "Pawn to c4 — offering the c-pawn to contest the centre.",  "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1",           "solution": ["c2","c4"] },
+        { "label": "Sicilian Defence",         "hint": "Pawn to c5 — Black contests the centre from the flank.",   "turn": "b", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",           "solution": ["c7","c5"] },
+        { "label": "London System",            "hint": "Bishop to f4 — solid development, the London way.",         "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 2",         "solution": ["c1","f4"] },
+        { "label": "Castle to Safety",         "hint": "Castle kingside — king safety before anything else.",       "turn": "w", "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 4 6", "solution": ["e1","g1"] },
+        { "label": "Central Knight",           "hint": "Knight to c3 — supports centre pawns.",                     "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",     "solution": ["b1","c3"] },
+        { "label": "King's Indian Fianchetto", "hint": "Bishop to g7 — fianchetto completes the King's Indian.",   "turn": "b", "fen": "rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq c3 0 3",    "solution": ["f8","g7"] }
+      ]
+    },
+    {
+      "title": "Italian & Spanish",
+      "puzzles": [
+        { "label": "Italian Game",             "hint": "Bishop to c4 — eyeing the f7 weakness.",                    "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",      "solution": ["f1","c4"] },
+        { "label": "Ruy López",                "hint": "Bishop to b5 — the Spanish Opening!",                       "turn": "w", "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",   "solution": ["f1","b5"] },
+        { "label": "Open Game (1.e4)",         "hint": "Pawn to e4 — the most popular first move.",                  "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",              "solution": ["e2","e4"] },
+        { "label": "Develop the Knight",       "hint": "Knight to f3 — develops a piece and controls e5.",          "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1",           "solution": ["g1","f3"] },
+        { "label": "Castle to Safety",         "hint": "Castle kingside — king safety before anything else.",       "turn": "w", "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 4 6", "solution": ["e1","g1"] },
+        { "label": "Central Knight",           "hint": "Knight to c3 — supports centre pawns.",                     "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",     "solution": ["b1","c3"] },
+        { "label": "Sicilian Defence",         "hint": "Pawn to c5 — Black contests the centre.",                   "turn": "b", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",           "solution": ["c7","c5"] },
+        { "label": "Queen's Gambit",           "hint": "Pawn to c4 — offering the c-pawn.",                        "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1",           "solution": ["c2","c4"] },
+        { "label": "London System",            "hint": "Bishop to f4 — the London way.",                            "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 2",         "solution": ["c1","f4"] },
+        { "label": "King's Indian Fianchetto", "hint": "Bishop to g7 — the King's Indian fianchetto.",             "turn": "b", "fen": "rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq c3 0 3",    "solution": ["f8","g7"] }
+      ]
+    },
+    {
+      "title": "Queen's Pawn Openings",
+      "puzzles": [
+        { "label": "Queen's Gambit",           "hint": "Pawn to c4 — offering the c-pawn to contest the centre.",  "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1",           "solution": ["c2","c4"] },
+        { "label": "London System",            "hint": "Bishop to f4 — solid development, the London way.",         "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 2",         "solution": ["c1","f4"] },
+        { "label": "King's Indian Fianchetto", "hint": "Bishop to g7 — fianchetto completes the King's Indian.",   "turn": "b", "fen": "rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq c3 0 3",    "solution": ["f8","g7"] },
+        { "label": "Central Knight",           "hint": "Knight to c3 — supports centre pawns.",                     "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",     "solution": ["b1","c3"] },
+        { "label": "Open Game (1.e4)",         "hint": "Pawn to e4 — the most popular first move.",                  "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",              "solution": ["e2","e4"] },
+        { "label": "Develop the Knight",       "hint": "Knight to f3 — develops a piece and controls e5.",          "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1",           "solution": ["g1","f3"] },
+        { "label": "Italian Game",             "hint": "Bishop to c4 — eyeing the f7 weakness.",                    "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",      "solution": ["f1","c4"] },
+        { "label": "Ruy López",                "hint": "Bishop to b5 — pinning the knight on c6.",                  "turn": "w", "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",   "solution": ["f1","b5"] },
+        { "label": "Castle to Safety",         "hint": "Castle kingside — king safety before anything else.",       "turn": "w", "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 4 6", "solution": ["e1","g1"] },
+        { "label": "Sicilian Defence",         "hint": "Pawn to c5 — Black contests the centre from the flank.",   "turn": "b", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",           "solution": ["c7","c5"] }
+      ]
+    },
+    {
+      "title": "Sicilian & Defences",
+      "puzzles": [
+        { "label": "Sicilian Defence",         "hint": "Pawn to c5 — Black contests the centre from the flank.",   "turn": "b", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",           "solution": ["c7","c5"] },
+        { "label": "King's Indian Fianchetto", "hint": "Bishop to g7 — fianchetto completes the King's Indian.",   "turn": "b", "fen": "rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq c3 0 3",    "solution": ["f8","g7"] },
+        { "label": "Open Game (1.e4)",         "hint": "Pawn to e4 — the most popular first move.",                  "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",              "solution": ["e2","e4"] },
+        { "label": "Queen's Gambit",           "hint": "Pawn to c4 — offering the c-pawn to contest the centre.",  "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1",           "solution": ["c2","c4"] },
+        { "label": "Italian Game",             "hint": "Bishop to c4 — eyeing the f7 weakness.",                    "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",      "solution": ["f1","c4"] },
+        { "label": "Ruy López",                "hint": "Bishop to b5 — pinning the knight on c6.",                  "turn": "w", "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",   "solution": ["f1","b5"] },
+        { "label": "Develop the Knight",       "hint": "Knight to f3 — develops a piece and controls e5.",          "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1",           "solution": ["g1","f3"] },
+        { "label": "London System",            "hint": "Bishop to f4 — solid development, the London way.",         "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 2",         "solution": ["c1","f4"] },
+        { "label": "Castle to Safety",         "hint": "Castle kingside — king safety before anything else.",       "turn": "w", "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 4 6", "solution": ["e1","g1"] },
+        { "label": "Central Knight",           "hint": "Knight to c3 — supports centre pawns.",                     "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",     "solution": ["b1","c3"] }
+      ]
+    },
+    {
+      "title": "Complete Repertoire",
+      "puzzles": [
+        { "label": "Open Game (1.e4)",         "hint": "Pawn to e4 — start with the most popular move!",            "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",              "solution": ["e2","e4"] },
+        { "label": "Sicilian Defence",         "hint": "Pawn to c5 — the Sicilian counter!",                        "turn": "b", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",           "solution": ["c7","c5"] },
+        { "label": "Develop the Knight",       "hint": "Knight to f3 — the universal developing move.",             "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1",           "solution": ["g1","f3"] },
+        { "label": "Italian Game",             "hint": "Bishop to c4 — the classic Italian!",                       "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",      "solution": ["f1","c4"] },
+        { "label": "Ruy López",                "hint": "Bishop to b5 — the Spanish Opening!",                       "turn": "w", "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",   "solution": ["f1","b5"] },
+        { "label": "Queen's Gambit",           "hint": "Pawn to c4 — the Queen's Gambit!",                         "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1",           "solution": ["c2","c4"] },
+        { "label": "King's Indian Fianchetto", "hint": "Bishop to g7 — the King's Indian!",                        "turn": "b", "fen": "rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq c3 0 3",    "solution": ["f8","g7"] },
+        { "label": "London System",            "hint": "Bishop to f4 — the solid London!",                          "turn": "w", "fen": "rnbqkbnr/pppppppp/8/8/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 2",         "solution": ["c1","f4"] },
+        { "label": "Castle to Safety",         "hint": "Castle kingside — always castle early!",                    "turn": "w", "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 4 6", "solution": ["e1","g1"] },
+        { "label": "Central Knight",           "hint": "Knight to c3 — complete your development!",                 "turn": "w", "fen": "rnbqkbnr/pppp1ppp/8/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",     "solution": ["b1","c3"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "title": "Queen Checkmates",
+  "puzzles": [
+    {
+      "label": "Queen Back Rank",
+      "hint": "Queen to captures bishop — back rank checkmate.",
+      "turn": "w",
+      "fen": "4Kbk1/5ppp/8/8/8/Q7/5PPP/8 w - - 0 1",
+      "solution": [
+        "a3",
+        "f8"
+      ]
+    },
+    {
+      "label": "Corner with Queen",
+      "hint": "Queen to g7 — king trapped in the corner!",
+      "turn": "w",
+      "fen": "7k/8/5KQ1/8/8/8/8/8 w - - 0 1",
+      "solution": [
+        "g6",
+        "g7"
+      ]
+    },
+    {
+      "label": "Queen + Rook",
+      "hint": "Queen to h2 — rook on g2 covers the g-file.",
+      "turn": "w",
+      "fen": "7k/8/8/8/8/6R1/6Q1/6K1 w - - 0 1",
+      "solution": [
+        "g2",
+        "h2"
+      ]
+    },
+    {
+      "label": "Queen b8",
+      "hint": "Queen to b8 — king on a8 is mated.",
+      "turn": "w",
+      "fen": "k7/8/1QK5/8/8/8/8/8 w - - 0 1",
+      "solution": [
+        "b6",
+        "b7"
+      ]
+    },
+    {
+      "label": "Queen + King",
+      "hint": "Queen to a7 — the king cannot escape.",
+      "turn": "w",
+      "fen": "k7/8/2K5/8/8/8/8/1Q6 w - - 0 1",
+      "solution": [
+        "b1",
+        "b7"
+      ]
+    },
+    {
+      "label": "Queen f7",
+      "hint": "Queen to f7 — checkmate on the edge.",
+      "turn": "w",
+      "fen": "5k2/8/4QK2/8/8/8/8/8 w - - 0 1",
+      "solution": [
+        "e6",
+        "f7"
+      ]
+    },
+    {
+      "label": "Two Queens",
+      "hint": "Queen to h7 — the other queen controls the h-file.",
+      "turn": "w",
+      "fen": "q6k/5Q2/6P1/8/8/8/6P1/6K1 w - - 0 1",
+      "solution": [
+        "f7",
+        "h7"
+      ]
+    },
+    {
+      "label": "Queen h8",
+      "hint": "Queen to b8 — king has no moves.",
+      "turn": "w",
+      "fen": "7k/2R5/1Q6/8/8/8/5K2/8 w - - 0 1",
+      "solution": [
+        "b6",
+        "b8"
+      ]
+    },
+    {
+      "label": "Queen d7",
+      "hint": "Queen to d7 — checkmate on the 7th rank.",
+      "turn": "w",
+      "fen": "k7/8/1K6/8/8/8/8/3Q4 w - - 0 1",
+      "solution": [
+        "d1",
+        "d8"
+      ]
+    },
+    {
+      "label": "Queen a8",
+      "hint": "Queen to a8 — the king has no escape.",
+      "turn": "w",
+      "fen": "k7/8/1RK5/8/8/8/8/7Q w - - 0 1",
+      "solution": [
+        "h1",
+        "a1"
+      ]
+    }
+  ]
+}

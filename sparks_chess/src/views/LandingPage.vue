@@ -23,6 +23,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4v-2z"/>
         </svg>
+        <span class="bmc-label">Donate</span>
       </a>
     </div>
 
@@ -55,6 +56,20 @@
         <span class="pill-icon" :style="{ color: item.color }">
           <NavIcon :name="item.icon" />
         </span>
+      </router-link>
+    </nav>
+
+    <!-- center bottom: Endless Puzzles -->
+    <nav class="center-nav">
+      <router-link
+        :to="endlessItem.path"
+        class="nav-pill pill-center"
+        :style="{ '--c': endlessItem.color }"
+      >
+        <span class="pill-icon" :style="{ color: endlessItem.color }">
+          <NavIcon :name="endlessItem.icon" />
+        </span>
+        <span class="pill-label" :style="{ color: endlessItem.color }">{{ endlessItem.label }}</span>
       </router-link>
     </nav>
 
@@ -111,10 +126,11 @@ export default {
         { path: '/endgames', icon: 'endgames', color: '#A78BFA', label: 'Endgames' },
         { path: '/openings', icon: 'openings', color: '#22D3EE', label: 'Openings' },
       ],
+      endlessItem: { path: '/endless', icon: 'endless', color: '#22c55e', label: 'Endless Puzzles' },
     }
   },
   computed: {
-    allItems() { return [...this.leftItems, ...this.rightItems] },
+    allItems() { return [...this.leftItems, ...this.rightItems, this.endlessItem] },
   },
   methods: {
     onMouseMove(e) {
@@ -130,7 +146,7 @@ export default {
 /* ─── base ─────────────────────────────────────────────── */
 .landing {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -230,11 +246,24 @@ export default {
   transform: scale(1.1);
 }
 
-.social-btn.bmc { color: #fbbf24; border-color: rgba(251,191,36,0.25); }
+.social-btn.bmc {
+  color: #fbbf24;
+  border-color: rgba(251,191,36,0.25);
+  width: auto;
+  border-radius: 999px;
+  padding: 0 14px;
+  gap: 7px;
+}
 .social-btn.bmc:hover {
   background: rgba(251,191,36,0.14);
   border-color: rgba(251,191,36,0.6);
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+.bmc-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 /* ─── side navs ──────────────────────────────────────────── */
@@ -255,7 +284,7 @@ export default {
 .nav-pill {
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 86px;
   border-radius: 999px;
   background: rgba(10, 10, 10, 0.48);
   border: 1px solid rgba(255,255,255,0.1);
@@ -278,14 +307,14 @@ export default {
 /* icon slot */
 .pill-icon {
   flex-shrink: 0;
-  width: 70px;
-  height: 70px;
+  width: 86px;
+  height: 86px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pill-icon svg { width: 30px; height: 30px; }
+.pill-icon svg { width: 40px; height: 40px; }
 
 /* label */
 .pill-label {
@@ -293,7 +322,7 @@ export default {
   max-width: 0;
   overflow: hidden;
   opacity: 0;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -307,17 +336,36 @@ export default {
 /* left pills: icon left, label slides right */
 .pill-left { flex-direction: row; }
 .pill-left:hover .pill-label {
-  max-width: 140px;
+  max-width: 160px;
   opacity: 1;
-  padding: 0 22px 0 0;
+  padding: 0 26px 0 0;
 }
 
 /* right pills: label slides left, icon right */
 .pill-right { flex-direction: row; }
 .pill-right:hover .pill-label {
-  max-width: 140px;
+  max-width: 160px;
   opacity: 1;
-  padding: 0 0 0 22px;
+  padding: 0 0 0 26px;
+}
+
+/* ─── center nav (Endless) ───────────────────────────────── */
+.center-nav {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+/* pill-center: icon on left, label slides right on hover */
+.pill-center { flex-direction: row; }
+.pill-center:hover .pill-label {
+  max-width: 180px;
+  opacity: 1;
+  padding: 0 28px 0 0;
 }
 
 /* ─── footer subtitle ────────────────────────────────────── */
@@ -355,11 +403,13 @@ export default {
 }
 
 /* ─── mobile nav ─────────────────────────────────────────── */
-.mobile-nav { display: none; }
+.mobile-nav  { display: none; }
+.center-nav  { /* always visible on desktop */ }
 
 /* ─── responsive ──────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .side-nav { display: none; }
+  .side-nav  { display: none; }
+  .center-nav { display: none; }
 
   .hero-title { letter-spacing: 0.04em; }
 
@@ -405,9 +455,12 @@ export default {
     white-space: nowrap;
   }
 
+  /* last pill (Endless) spans both columns */
+  .mobile-pill:last-child { grid-column: 1 / -1; }
+
   /* subtitle above pills on mobile */
   .footer-sub {
-    bottom: 162px;
+    bottom: 220px;
     gap: 10px;
   }
 

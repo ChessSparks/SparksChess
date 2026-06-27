@@ -4,7 +4,7 @@
     <!-- level selector -->
     <div class="levels">
       <button
-        v-for="n in 10" :key="n"
+        v-for="n in puzzles.length" :key="n"
         class="level-btn"
         :class="{ active: currentLevel === n, solved: solved.includes(n), locked: n > maxUnlocked }"
         :disabled="n > maxUnlocked"
@@ -40,13 +40,11 @@
     <div class="controls">
       <button class="ctrl-btn" @click="resetPuzzle">↺ Reset</button>
       <button class="ctrl-btn" @click="showHint = !showHint">💡 Hint</button>
-      <button v-if="solved.includes(currentLevel) && currentLevel < 10"
+      <button v-if="solved.includes(currentLevel) && currentLevel < puzzles.length"
               class="ctrl-btn next" @click="loadLevel(currentLevel + 1)">
         Next →
       </button>
     </div>
-
-    <div v-if="allSolved" class="completed">🏆 All 10 levels completed!</div>
 
   </div>
 </template>
@@ -58,6 +56,7 @@ import 'vue3-chessboard/style.css'
 export default {
   name: 'TrainingBoard',
   components: { TheChessboard },
+  emits: ['complete'],
   props: {
     puzzles: { type: Array, required: true },
     accent:  { type: String, default: '#e8d5a3' },
@@ -74,8 +73,8 @@ export default {
   },
   computed: {
     currentPuzzle() { return this.puzzles[this.currentLevel - 1] },
-    maxUnlocked()   { return Math.min(10, (this.solved.length ? Math.max(...this.solved) : 0) + 1) },
-    allSolved()     { return this.solved.length === 10 },
+    maxUnlocked()   { return Math.min(this.puzzles.length, (this.solved.length ? Math.max(...this.solved) : 0) + 1) },
+    allSolved()     { return this.solved.length === this.puzzles.length },
     currentConfig() {
       const p = this.currentPuzzle
       return {
@@ -110,6 +109,9 @@ export default {
         this.feedbackType = 'correct'
         if (!this.solved.includes(this.currentLevel)) {
           this.solved.push(this.currentLevel)
+          if (this.solved.length === this.puzzles.length) {
+            this.$emit('complete')
+          }
         }
       } else {
         this.feedback = '✗ Not quite — try again!'
@@ -190,4 +192,13 @@ export default {
 /* transitions */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.28s; }
 .fade-enter-from,  .fade-leave-to      { opacity: 0; }
+
+@media (max-width: 640px) {
+  .board-wrap   { width: calc(100vw - 32px); }
+  .level-btn    { width: 38px; height: 38px; font-size: 13px; }
+  .puzzle-label { font-size: 15px; }
+  .puzzle-hint  { font-size: 12px; }
+  .ctrl-btn     { padding: 8px 16px; font-size: 12px; }
+  .feedback     { font-size: 13px; padding: 8px 20px; }
+}
 </style>
