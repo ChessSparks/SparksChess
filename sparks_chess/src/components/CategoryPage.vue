@@ -19,7 +19,6 @@
           :class="{ active: activeTab === tab.id }"
           @click="activeTab = tab.id"
         >
-          <span class="tab-icon">{{ tab.icon }}</span>
           {{ tab.label }}
         </button>
       </div>
@@ -45,9 +44,9 @@ export default {
     return {
       activeTab: 'train',
       tabs: [
-        { id: 'train',  icon: '♟', label: 'Training' },
-        { id: 'videos', icon: '▶', label: 'Videos'   },
-        { id: 'read',   icon: '📖', label: 'Read'     },
+        { id: 'train',  label: 'Training' },
+        { id: 'videos', label: 'Videos'   },
+        { id: 'read',   label: 'Read'     },
       ],
     }
   },
@@ -123,7 +122,6 @@ export default {
   transition: color 0.2s, border-color 0.2s;
 }
 
-.tab-btn .tab-icon { font-size: 15px; }
 .tab-btn:hover  { color: rgba(255,255,255,0.72); }
 .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
 
@@ -171,8 +169,6 @@ export default {
     letter-spacing: 0.04em;
     gap: 4px;
   }
-
-  .tab-btn .tab-icon { font-size: 13px; }
 
   .cat-main { padding: 20px 16px; }
 }
