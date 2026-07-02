@@ -8,7 +8,10 @@
     </template>
 
     <template #videos>
-      <ComingSoon />
+      <div class="video-section">
+        <h2 class="section-title">Basic Checkmates</h2>
+        <VideoGrid :videos="basicMateVideos" />
+      </div>
     </template>
 
     <template #read>
@@ -38,15 +41,19 @@
 <script>
 import CategoryPage   from '../components/CategoryPage.vue'
 import LevelSelector  from '../components/LevelSelector.vue'
-import ComingSoon     from '../components/ComingSoon.vue'
 import LoadingScreen  from '../components/LoadingScreen.vue'
+import VideoGrid      from '../components/VideoGrid.vue'
 
 export default {
   name: 'MatesView',
-  components: { CategoryPage, LevelSelector, ComingSoon, LoadingScreen },
+  components: { CategoryPage, LevelSelector, LoadingScreen, VideoGrid },
   data() {
     return {
       loading: true,
+      basicMateVideos: [
+        { id: 'CfG1U_Qe-rs', title: 'How To Checkmate With A Rook And King?', duration: 'Basic Checkmates' },
+        { id: 'pvZHpu45i88', title: 'How To Checkmate With a King and Queen', duration: 'Basic Checkmates' },
+      ],
       patterns: [
         { name: 'Back Rank Mate',  desc: 'Rook or queen delivers mate on the first rank when the king is trapped behind its own pawns.' },
         { name: 'Smothered Mate',  desc: 'A knight mates a king that is surrounded (smothered) by its own pieces.' },
@@ -64,6 +71,8 @@ export default {
 </script>
 
 <style scoped>
+.video-section { max-width: 1100px; }
+.section-title { font-size: 22px; font-weight: 800; color: #EF4444; margin: 0 0 20px; }
 .article { max-width: 720px; line-height: 1.75; }
 .article h2 { font-size: 26px; font-weight: 800; color: #EF4444; margin: 0 0 16px; }
 .article h3 { font-size: 18px; font-weight: 700; color: #e0d0b0; margin: 28px 0 10px; }
