@@ -1,7 +1,6 @@
 <template>
   <nav class="navbar">
     <router-link to="/" class="logo">
-      <span class="logo-icon">♚</span>
       <span class="logo-text">SparksChess</span>
     </router-link>
     <ul class="nav-links">
@@ -35,12 +34,6 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-}
-
-.logo-icon {
-  font-size: 26px;
-  line-height: 1;
-  color: #e8d5a3;
 }
 
 .logo-text {

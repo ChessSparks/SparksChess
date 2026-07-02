@@ -9,8 +9,18 @@
 
     <template #videos>
       <div class="video-section">
-        <h2 class="section-title">Basic Checkmates</h2>
-        <VideoGrid :videos="basicMateVideos" />
+        <button class="accordion-header" @click="basicMatesOpen = !basicMatesOpen">
+          <span>Basic Checkmates</span>
+          <svg class="chevron" :class="{ open: basicMatesOpen }" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <transition name="accordion" @enter="onEnter" @leave="onLeave">
+          <div class="accordion-body" v-if="basicMatesOpen">
+            <VideoGrid :videos="basicMateVideos" />
+          </div>
+        </transition>
       </div>
     </template>
 
@@ -50,6 +60,7 @@ export default {
   data() {
     return {
       loading: true,
+      basicMatesOpen: false,
       basicMateVideos: [
         { id: 'CfG1U_Qe-rs', title: 'How To Checkmate With A Rook And King?', duration: 'Basic Checkmates' },
         { id: 'pvZHpu45i88', title: 'How To Checkmate With a King and Queen', duration: 'Basic Checkmates' },
@@ -67,12 +78,44 @@ export default {
   mounted() {
     setTimeout(() => { this.loading = false }, 3000)
   },
+  methods: {
+    onEnter(el) {
+      el.style.height = '0px'
+      requestAnimationFrame(() => { el.style.height = el.scrollHeight + 'px' })
+    },
+    onLeave(el) {
+      el.style.height = el.scrollHeight + 'px'
+      requestAnimationFrame(() => { el.style.height = '0px' })
+    },
+  },
 }
 </script>
 
 <style scoped>
 .video-section { max-width: 1100px; }
-.section-title { font-size: 22px; font-weight: 800; color: #EF4444; margin: 0 0 20px; }
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(239,68,68,0.07);
+  border: 1px solid rgba(239,68,68,0.22);
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #EF4444;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.accordion-header:hover { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.35); }
+
+.chevron { width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.25s; }
+.chevron.open { transform: rotate(180deg); }
+
+.accordion-body { overflow: hidden; transition: height 0.25s ease; }
+.accordion-body > :deep(.video-grid) { margin-top: 16px; }
 .article { max-width: 720px; line-height: 1.75; }
 .article h2 { font-size: 26px; font-weight: 800; color: #EF4444; margin: 0 0 16px; }
 .article h3 { font-size: 18px; font-weight: 700; color: #e0d0b0; margin: 28px 0 10px; }
