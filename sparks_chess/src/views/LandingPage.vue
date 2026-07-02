@@ -2,6 +2,24 @@
   <div class="landing" @mousemove="onMouseMove">
     <div class="bg" :style="{ transform: `translate(${shift.x}px, ${shift.y}px) scale(1.07)` }" />
     <div class="overlay" />
+    <div class="spotlight" :style="{ background: `radial-gradient(560px circle at ${spot.x}px ${spot.y}px, rgba(255,190,120,0.10), transparent 62%)` }" />
+
+    <!-- drifting embers -->
+    <div class="embers" aria-hidden="true">
+      <span
+        v-for="e in embers"
+        :key="e.id"
+        class="ember"
+        :style="{
+          left: e.left + '%',
+          width: e.size + 'px',
+          height: e.size + 'px',
+          animationDelay: e.delay + 's',
+          animationDuration: e.duration + 's',
+          '--drift': e.drift + 'px',
+        }"
+      />
+    </div>
 
     <!-- hero title only -->
     <div class="hero">
@@ -112,6 +130,15 @@ export default {
   data() {
     return {
       shift: { x: 0, y: 0 },
+      spot: { x: 0, y: 0 },
+      embers: Array.from({ length: 24 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        delay: Math.random() * 9,
+        duration: 7 + Math.random() * 7,
+        size: 2 + Math.random() * 3,
+        drift: (Math.random() - 0.5) * 90,
+      })),
       subWords: [
         { w: 'Think.', color: '#F59E0B' },
         { w: 'Learn.', color: '#EF4444' },
@@ -137,6 +164,7 @@ export default {
       const x = ((e.clientX / window.innerWidth)  - 0.5) * -22
       const y = ((e.clientY / window.innerHeight) - 0.5) * -14
       this.shift = { x, y }
+      this.spot = { x: e.clientX, y: e.clientY }
     },
   },
 }
@@ -149,6 +177,44 @@ export default {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  animation: pageIn 1.1s ease both;
+}
+
+.spotlight {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transition: background 0.08s linear;
+}
+
+/* ─── embers ─────────────────────────────────────────────── */
+.embers {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ember {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,190,110,0.95), rgba(255,120,40,0.25) 65%, transparent 100%);
+  box-shadow: 0 0 6px 1px rgba(255,150,60,0.55);
+  opacity: 0;
+  animation-name: emberRise;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes emberRise {
+  0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
+  12%  { opacity: 0.9; }
+  80%  { opacity: 0.35; }
+  100% { transform: translate(var(--drift), -108vh) scale(1); opacity: 0; }
 }
 
 .bg {
@@ -174,6 +240,11 @@ export default {
 }
 
 /* ─── keyframes ──────────────────────────────────────────── */
+@keyframes pageIn {
+  from { opacity: 0; filter: brightness(0.5); }
+  to   { opacity: 1; filter: brightness(1); }
+}
+
 @keyframes titleIn {
   0%   { opacity: 0; letter-spacing: 0.35em; transform: translateY(-16px); }
   100% { opacity: 1; letter-spacing: 0.07em; transform: translateY(0); }
@@ -184,9 +255,24 @@ export default {
   50%       { text-shadow: 0 0 40px rgba(232,213,163,0.52), 0 4px 28px rgba(0,0,0,0.7); }
 }
 
+@keyframes shimmer {
+  0%, 88%, 100% { background-position: 200% 0; }
+  94%           { background-position: 0% 0; }
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 /* ─── hero ───────────────────────────────────────────────── */
@@ -205,11 +291,16 @@ export default {
   margin: 0;
   font-size: clamp(52px, 9vw, 96px);
   font-weight: 900;
-  color: #e8d5a3;
   letter-spacing: 0.07em;
+  background: linear-gradient(100deg, #e8d5a3 42%, #fff 50%, #e8d5a3 58%);
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   animation:
     titleIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both,
-    glow    3.6s ease-in-out 1.4s infinite;
+    glow    3.6s ease-in-out 1.4s infinite,
+    shimmer 6s ease-in-out 2s infinite;
 }
 
 /* ─── social ─────────────────────────────────────────────── */
@@ -292,17 +383,25 @@ export default {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  opacity: 0;
   transition:
     background   0.22s ease,
     border-color 0.22s ease,
-    box-shadow   0.22s ease;
+    box-shadow   0.22s ease,
+    transform    0.22s ease;
 }
 
 .nav-pill:hover {
   background: color-mix(in srgb, var(--c) 10%, transparent);
   border-color: color-mix(in srgb, var(--c) 55%, transparent);
   box-shadow: 0 0 26px color-mix(in srgb, var(--c) 22%, transparent);
+  transform: scale(1.035);
 }
+
+.nav-left  .nav-pill { animation: slideInLeft  0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.nav-right .nav-pill { animation: slideInRight 0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.nav-left  .nav-pill:nth-child(1), .nav-right .nav-pill:nth-child(1) { animation-delay: 0.55s; }
+.nav-left  .nav-pill:nth-child(2), .nav-right .nav-pill:nth-child(2) { animation-delay: 0.72s; }
 
 /* icon slot */
 .pill-icon {
@@ -314,7 +413,8 @@ export default {
   justify-content: center;
 }
 
-.pill-icon svg { width: 40px; height: 40px; }
+.pill-icon svg { width: 40px; height: 40px; transition: transform 0.25s ease; }
+.nav-pill:hover .pill-icon svg { transform: scale(1.15); }
 
 /* label */
 .pill-label {
@@ -361,7 +461,7 @@ export default {
 }
 
 /* pill-center: icon on left, label slides right on hover */
-.pill-center { flex-direction: row; }
+.pill-center { flex-direction: row; animation: fadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both; }
 .pill-center:hover .pill-label {
   max-width: 180px;
   opacity: 1;
@@ -389,6 +489,7 @@ export default {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
+  animation: fadeUp 0.6s ease 1.0s both;
 }
 
 .sub-word {
@@ -437,7 +538,15 @@ export default {
     text-decoration: none;
     color: #e8d5a3;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
+
+  .mobile-pill:nth-child(1) { animation-delay: 0.5s; }
+  .mobile-pill:nth-child(2) { animation-delay: 0.6s; }
+  .mobile-pill:nth-child(3) { animation-delay: 0.7s; }
+  .mobile-pill:nth-child(4) { animation-delay: 0.8s; }
+  .mobile-pill:nth-child(5) { animation-delay: 0.9s; }
 
   .mobile-icon {
     flex-shrink: 0;
@@ -465,5 +574,13 @@ export default {
   }
 
   .sub-word { font-size: 13px; letter-spacing: 0.15em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing, .hero-title, .nav-pill, .pill-center, .footer-pill, .mobile-pill, .sub-word {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .embers, .spotlight { display: none; }
 }
 </style>

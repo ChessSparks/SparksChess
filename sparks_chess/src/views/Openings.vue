@@ -1,7 +1,7 @@
 <template>
   <div>
   <LoadingScreen :show="loading" type="openings" color="#22D3EE" title="Openings" />
-  <CategoryPage title="Openings" icon="📖" accent="#22D3EE">
+  <CategoryPage title="Openings" accent="#22D3EE">
 
     <template #train>
       <LevelSelector category="openings" accent="#22D3EE" />

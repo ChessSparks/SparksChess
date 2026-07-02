@@ -1,7 +1,7 @@
 <template>
   <div>
   <LoadingScreen :show="loading" type="endgames" color="#A78BFA" title="Endgames" />
-  <CategoryPage title="Endgames" icon="⏳" accent="#A78BFA">
+  <CategoryPage title="Endgames" accent="#A78BFA">
 
     <template #train>
       <LevelSelector category="endgames" accent="#A78BFA" />
